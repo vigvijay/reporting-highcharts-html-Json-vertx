@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Campaign Epoch Data Retriever</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/simple-sidebar.css" rel="stylesheet">
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<!--                 <img src="images/1.jpg"/> --> <a href="#">
+						Gravity4 </a>
+				</li>
+				<li><a href="#">Dashboard</a></li>
+				<!--                 <li> -->
+				<!--                     <a href="#">Shortcuts</a> -->
+				<!--                 </li> -->
+				<!--                 <li> -->
+				<!--                     <a href="#">Overview</a> -->
+				<!--                 </li> -->
+				<!--                 <li> -->
+				<!--                     <a href="#">Events</a> -->
+				<!--                 </li> -->
+				<!--                 <li> -->
+				<!--                     <a href="#">About</a> -->
+				<!--                 </li> -->
+				<!--                 <li> -->
+				<!--                     <a href="#">Services</a> -->
+				<!--                 </li> -->
+				<!--                 <li> -->
+				<!--                     <a href="#">Contact</a> -->
+				<!--                 </li> -->
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2>Gravity4 Server Reports</h2>
+							<label for="dropDownId">Choose a Report</label>
+							<div >
+								 <select id="dropDownId" class="styled-select">
+									<option value="sspReports">SSP reports</option>
+									<option value = "retargetingReports">Retargeting Reports</option>
+									<option value = "convGoalReports">Conversion Goal Reports</option>
+								</select>
+							</div>
+						<!-- 				    <label class="sr-only" for="exampleInputEmail2">Email address</label> -->
+						<form id="ajaxRequestForm" class="form-inline" role="form">
+							<div style="padding-top: 30pt;">
+								<div>
+									<label id="cmpgIdLabel" for="cmpgId">SSP ID:</label> 
+									<input type="text"
+										id="cmpgId" placeholder="Enter SSP ID"
+										required> 
+									<label for="datepicker1"
+										style="padding-left: 10pt;">Start Date:</label> 
+									<input
+										type="text" id="datepicker1">
+								    <label for="datepicker2"
+										style="padding-left: 10pt;">End Date: </label>
+								 	<input
+										type="text" id="datepicker2">
+									<button id="sendRequestButton" type="submit"
+										class="btn btn-info">Submit</button>
+								</div>
+
+							</div>
+							<div style="padding-top: 10pt;">
+								 <p>** Enter a valid ID </p>
+								 <p> ** The difference between Start date and End date should not be more than 11 days</p>
+							 </div>
+							<!-- 				    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email"> -->
+
+						</form>
+						<div id="anotherSection">
+							<fieldset>
+								<legend>Response</legend>
+								<div id="ajaxResponse"></div>
+								<div id="ajaxResponse2"></div>
+								<div id="ajaxResponse3"></div>
+							</fieldset>
+						</div>
+
+					</div>
+					<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle
+						Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /#page-content-wrapper -->
+
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+		type="text/javascript"></script>
+	<script type="text/javascript" src="apps.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<script>
+	
+	
+  </script>
+	<!-- Menu Toggle Script -->
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    
+    </script>
+
+</body>
+
+</html>
